@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>DOOM</title>
-    <!-- Librería JS-DOS -->
-    <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
-    <link href="https://js-dos.com/6.22/current/js-dos.css" rel="stylesheet">
+    <!-- Cargamos la versión 7 de js-dos -->
+    <script src="https://js-dos.com/6.22/v7/js-dos.js"></script>
+    <link href="https://js-dos.com/6.22/v7/js-dos.css" rel="stylesheet">
     <style>
         body { margin: 0; background: black; overflow: hidden; }
         #doom { width: 100vw; height: 100vh; }
@@ -14,9 +14,9 @@
 <body>
     <div id="doom"></div>
     <script>
-        Dos(document.getElementById("doom"), {
-            wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
-        }).run("https://archive.org/download/doom_20260622/doom.jsdos");
+        // La nueva sintaxis de v7 requiere usar 'Dos(elemento).run(url)'
+        // pero la estructura cambió ligeramente.
+        Dos(document.getElementById("doom")).run("https://archive.org/download/doom_20260622/doom.jsdos");
     </script>
 </body>
 </html>
