@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>DOOM</title>
-    <!-- Cargamos la versión 7 de js-dos -->
     <script src="https://js-dos.com/6.22/v7/js-dos.js"></script>
     <link href="https://js-dos.com/6.22/v7/js-dos.css" rel="stylesheet">
     <style>
@@ -14,9 +13,10 @@
 <body>
     <div id="doom"></div>
     <script>
-        // La nueva sintaxis de v7 requiere usar 'Dos(elemento).run(url)'
-        // pero la estructura cambió ligeramente.
-        Dos(document.getElementById("doom")).run("https://archive.org/download/doom_20260622/doom.jsdos");
+        // Esperamos a que la librería cargue completamente antes de ejecutar
+        window.addEventListener("load", function() {
+            Dos(document.getElementById("doom")).run("https://archive.org/download/doom_20260622/doom.jsdos");
+        });
     </script>
 </body>
 </html>
