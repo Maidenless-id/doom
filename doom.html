@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>DOOM.EXE</title>
+    <style>
+        body { 
+            background-color: #008080; 
+            font-family: 'MS Sans Serif', Tahoma, sans-serif; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .window { 
+            border: 2px outset #ffffff; 
+            background: #c0c0c0; 
+            padding: 2px; 
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        .title-bar { 
+            background: #000080; 
+            color: white; 
+            padding: 3px 5px; 
+            font-weight: bold; 
+            font-size: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .close-button {
+            background: #c0c0c0;
+            color: black;
+            border: 1px outset #ffffff;
+            width: 16px;
+            height: 14px;
+            text-align: center;
+            line-height: 12px;
+            font-size: 10px;
+            cursor: pointer;
+        }
+        #doom { 
+            width: 640px; 
+            height: 400px; 
+            border: 2px inset #ffffff;
+            background: black;
+        }
+    </style>
+
+    <script src="https://js-dos.com/6.22/current/js-dos.js"></script>
+    <link href="https://js-dos.com/6.22/current/js-dos.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="window">
+    <div class="title-bar">
+        <span>DOOM.EXE</span>
+        <div class="close-button" onclick="window.close()">X</div>
+    </div>
+    <div id="doom"></div>
+</div>
+
+<script>
+  // Inicialización de JS-DOS
+  Dos(document.getElementById("doom"), {
+    wdosboxUrl: "https://js-dos.com/6.22/current/wdosbox.js",
+  }).run("https://archive.org/download/doom_20260622/doom.jsdos");
+</script>
+
+</body>
+</html>
